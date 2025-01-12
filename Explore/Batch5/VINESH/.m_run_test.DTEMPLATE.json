@@ -16,14 +16,14 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
+        "description" : "Mapping N version",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-01-12T07:28:46.683Z",
+  "updateTime" : "2025-01-12T10:05:34.859Z",
   "objectRefs" : [ {
     "id" : "jmkiXFeb3c9h3VzFideFEf",
     "name" : "FF_CONN_09",
