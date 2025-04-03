@@ -16,14 +16,14 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
+        "description" : "new_mapping",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-04-03T09:22:13.427Z",
+  "updateTime" : "2025-04-03T09:27:02.098Z",
   "objectRefs" : [ {
     "id" : "47KcgMVJ1WVbkaRm9SctAn",
     "name" : "jose_oracle_conn",

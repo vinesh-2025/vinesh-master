@@ -1,5 +1,6 @@
 {
   "content" : {
+    "description" : "new_mapping",
     "allowMaxFieldLength" : "false",
     "bigIntConvertType" : "ONLY_BIGINT",
     "documentType" : "MAPPING",
@@ -497,5 +498,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-04-03 02:22:13 PDT"
+  "vcsExportTime" : "2025-04-03 02:27:01 PDT"
 }
