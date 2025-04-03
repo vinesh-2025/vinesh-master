@@ -1,0 +1,501 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_flow",
+    "links" : [
+      {
+        "link" : "Expression -> Target"
+      },
+      {
+        "link" : "Source -> Expression"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2023-06-20T05:43:21.909Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "JOB_ID"
+            },
+            "name" : "JOB_ID",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FNAME"
+            },
+            "name" : "FNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LNAME"
+            },
+            "name" : "LNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SALARY"
+            },
+            "name" : "SALARY",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 25,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMP_ID"
+            },
+            "name" : "EMP_ID",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 10,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@47KcgMVJ1WVbkaRm9SctAn",
+          "connectionName" : "jose_oracle_conn",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "Oracle",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "VINESH_FLOW_SRC",
+            "label" : "VINESH_FLOW_SRC",
+            "objectName" : "VINESH_FLOW_SRC",
+            "path" : "VINESH_FLOW_SRC",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "JOB_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "JOB_ID",
+                "nativeName" : "JOB_ID",
+                "nativeType" : "decimal",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_SRC"
+                  }
+                ]
+              },
+              {
+                "name" : "FNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "FNAME",
+                "nativeName" : "FNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_SRC"
+                  }
+                ]
+              },
+              {
+                "name" : "LNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "LNAME",
+                "nativeName" : "LNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_SRC"
+                  }
+                ]
+              },
+              {
+                "name" : "SALARY",
+                "fieldType" : "CONNECTOR",
+                "label" : "SALARY",
+                "nativeName" : "SALARY",
+                "nativeType" : "decimal",
+                "original" : "false",
+                "precision" : 25,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_SRC"
+                  }
+                ]
+              },
+              {
+                "name" : "EMP_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "EMP_ID",
+                "nativeName" : "EMP_ID",
+                "nativeType" : "decimal",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_SRC"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2023-06-20T05:43:25.511Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "JOB_ID"
+            },
+            "name" : "JOB_ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FNAME"
+            },
+            "name" : "FNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LNAME"
+            },
+            "name" : "LNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SALARY"
+            },
+            "name" : "SALARY",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 25,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMP_ID"
+            },
+            "name" : "EMP_ID",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 10,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@47KcgMVJ1WVbkaRm9SctAn",
+          "connectionName" : "jose_oracle_conn",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "Oracle",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "VINESH_FLOW_TGT",
+            "label" : "VINESH_FLOW_TGT",
+            "objectName" : "VINESH_FLOW_TGT",
+            "path" : "VINESH_FLOW_TGT",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "JOB_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "JOB_ID",
+                "nativeName" : "JOB_ID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_TGT"
+                  }
+                ]
+              },
+              {
+                "name" : "FNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "FNAME",
+                "nativeName" : "FNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_TGT"
+                  }
+                ]
+              },
+              {
+                "name" : "LNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "LNAME",
+                "nativeName" : "LNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_TGT"
+                  }
+                ]
+              },
+              {
+                "name" : "SALARY",
+                "fieldType" : "CONNECTOR",
+                "label" : "SALARY",
+                "nativeName" : "SALARY",
+                "nativeType" : "decimal",
+                "original" : "false",
+                "precision" : 25,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_TGT"
+                  }
+                ]
+              },
+              {
+                "name" : "EMP_ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "EMP_ID",
+                "nativeName" : "EMP_ID",
+                "nativeType" : "decimal",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "VINESH_FLOW_TGT"
+                  }
+                ]
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "firstname",
+              "toField" : {
+                "name" : "FNAME"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "lastname",
+              "toField" : {
+                "name" : "LNAME"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "new_johid",
+              "toField" : {
+                "name" : "JOB_ID"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "SALARY",
+              "toField" : {
+                "name" : "SALARY"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "EMP_ID",
+              "toField" : {
+                "name" : "EMP_ID"
+              },
+              "fromFieldNames" : null
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2023-06-20T05:44:37.024Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "firstname",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Lower(FNAME)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "lastname",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Lower(LNAME)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "new_johid",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Concat('j-',JOB_ID)"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-03 02:22:13 PDT"
+}
