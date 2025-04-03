@@ -1,0 +1,472 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_denormalization",
+    "links" : [
+      {
+        "link" : "Source -> Expression"
+      },
+      {
+        "link" : "Aggregator -> Target"
+      },
+      {
+        "link" : "Expression -> Aggregator"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2024-11-19T10:13:31.805Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "STUDENT_NAME"
+            },
+            "name" : "STUDENT_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 30,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUBJECT"
+            },
+            "name" : "SUBJECT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 30,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "MARKS"
+            },
+            "name" : "MARKS",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 38,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@9DovCjX8gG2jM5XpJWUzu7",
+          "connectionName" : "Jeff_B2B_DWH",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "Oracle",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "STUDENT_SCORES_TGT",
+            "label" : "STUDENT_SCORES_TGT",
+            "objectName" : "STUDENT_SCORES_TGT",
+            "path" : "STUDENT_SCORES_TGT",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "STUDENT_NAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "STUDENT_NAME",
+                "nativeName" : "STUDENT_NAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 30,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "STUDENT_SCORES_TGT"
+                  }
+                ]
+              },
+              {
+                "name" : "SUBJECT",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUBJECT",
+                "nativeName" : "SUBJECT",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 30,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "STUDENT_SCORES_TGT"
+                  }
+                ]
+              },
+              {
+                "name" : "MARKS",
+                "fieldType" : "CONNECTOR",
+                "label" : "MARKS",
+                "nativeName" : "MARKS",
+                "nativeType" : "decimal",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "STUDENT_SCORES_TGT"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2024-11-19T10:13:31.808Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "STUDENT_NAME"
+            },
+            "name" : "STUDENT_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 100,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "MATHS"
+            },
+            "name" : "MATHS",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 38,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PHYSICS"
+            },
+            "name" : "PHYSICS",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 38,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CHEMISTRY"
+            },
+            "name" : "CHEMISTRY",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 38,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@9DovCjX8gG2jM5XpJWUzu7",
+          "connectionName" : "Jeff_B2B_DWH",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "Oracle",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "STUDENT_SCORES",
+            "label" : "STUDENT_SCORES",
+            "objectName" : "STUDENT_SCORES",
+            "path" : "STUDENT_SCORES",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "STUDENT_NAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "STUDENT_NAME",
+                "nativeName" : "STUDENT_NAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 100,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "STUDENT_SCORES"
+                  }
+                ]
+              },
+              {
+                "name" : "MATHS",
+                "fieldType" : "CONNECTOR",
+                "label" : "MATHS",
+                "nativeName" : "MATHS",
+                "nativeType" : "decimal",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "STUDENT_SCORES"
+                  }
+                ]
+              },
+              {
+                "name" : "PHYSICS",
+                "fieldType" : "CONNECTOR",
+                "label" : "PHYSICS",
+                "nativeName" : "PHYSICS",
+                "nativeType" : "decimal",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "STUDENT_SCORES"
+                  }
+                ]
+              },
+              {
+                "name" : "CHEMISTRY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CHEMISTRY",
+                "nativeName" : "CHEMISTRY",
+                "nativeType" : "decimal",
+                "original" : "false",
+                "precision" : 38,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "STUDENT_SCORES"
+                  }
+                ]
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "true",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "STUDENT_NAME",
+              "toField" : {
+                "name" : "STUDENT_NAME"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "maths",
+              "toField" : {
+                "name" : "MATHS"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "Physics",
+              "toField" : {
+                "name" : "PHYSICS"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "Chemistry",
+              "toField" : {
+                "name" : "CHEMISTRY"
+              },
+              "fromFieldNames" : null
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2024-11-19T10:19:56.474Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "O_Maths",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(SUBJECT='Maths',MARKS,null)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "O_Physics",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(SUBJECT='Physics',MARKS,null)"
+          },
+          {
+            "defaultValue" : "ERROR('transformation error')",
+            "name" : "O_Chemistry",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "IIF(SUBJECT='Chemistry',MARKS,null)"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2024-11-19T10:24:38.631Z",
+        "name" : "Aggregator",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "fields" : [
+          {
+            "name" : "maths",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "max(O_Maths)"
+          },
+          {
+            "name" : "Physics",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "max(O_Physics)"
+          },
+          {
+            "name" : "Chemistry",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "max(O_Chemistry)"
+          }
+        ],
+        "groupByFieldsList" : {
+          "fields" : [
+            {
+              "fieldName" : "STUDENT_NAME"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-04-03 02:37:51 PDT"
+}
